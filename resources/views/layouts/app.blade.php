@@ -13,7 +13,7 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/productos.css') }}">
-
+    
     <!-- Styles -->
     @vite(['resources/css/auth.css', 'resources/css/productos.css'])
 
@@ -22,6 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
+        /* Fondo de la página */
         body {
             background-image: url('https://altertecnia.com/wp-content/uploads/gestion-de-inventario.jpg');
             background-size: cover;
@@ -30,8 +31,24 @@
             padding-top: 70px; /* espacio para el navbar fijo */
         }
 
+        /* Estilo de la barra de navegación */
         .navbar {
-            background-color: rgba(255, 255, 255, 0.95) !important;
+            background-color: black !important; /* Fondo negro */
+        }
+
+        /* Estilo de los enlaces en la barra de navegación */
+        .navbar a {
+            color: white !important; /* Letra blanca */
+        }
+
+        /* Estilo de los enlaces cuando el ratón pasa por encima */
+        .navbar a:hover {
+            color: #ddd !important; /* Color al pasar el ratón */
+        }
+
+        /* Estilo de los enlaces activos */
+        .navbar .nav-item.active a {
+            color: #ddd !important;
         }
     </style>
 
@@ -39,7 +56,8 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm fixed-top">
+        <!-- Barra de navegación -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     EasyStock
@@ -88,6 +106,7 @@
             </div>
         </nav>
 
+        <!-- Contenido principal -->
         <main class="py-4">
             @yield('content')
         </main>
