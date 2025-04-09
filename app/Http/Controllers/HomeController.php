@@ -23,6 +23,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if (auth()->user()->hasRole('admin')) {
+            return redirect()->route('admin.dashboard');
+        }
+    
+        if (auth()->user()->hasRole('empleado')) {
+            return redirect()->route('empleado.dashboard');
+        }
+    
+        // Si no tiene ningún rol válido, lanza error
+        abort(403, 'Acceso no autorizado');
     }
 }

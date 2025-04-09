@@ -1,48 +1,59 @@
 @extends('layouts.app')
 
+@section('title', 'Registro')
+
 @section('content')
-<div class="d-flex justify-content-center align-items-center vh-100">
-    <div class="card shadow p-4" style="width: 400px;">
-        <h3 class="text-center mb-4">Registro</h3>
+<div class="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full bg-white p-8 rounded-2xl shadow-lg">
+        <h2 class="text-center text-2xl font-bold text-gray-800 mb-6">Registro</h2>
+
+        @if ($errors->any())
+            <div class="mb-4">
+                <ul class="text-sm text-red-600 list-disc list-inside">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
-            <div class="mb-3">
-                <label for="name" class="form-label">Nombre</label>
-                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autofocus>
-                @error('name')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+                <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus
+                    class="mt-1 block w-full rounded-xl border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
             </div>
 
-            <div class="mb-3">
-                <label for="email" class="form-label">Correo Electrónico</label>
-                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required>
-                @error('email')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+                <input id="email" type="email" name="email" value="{{ old('email') }}" required
+                    class="mt-1 block w-full rounded-xl border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
             </div>
 
-            <div class="mb-3">
-                <label for="password" class="form-label">Contraseña</label>
-                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
-                @error('password')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror
+            <div class="mb-4">
+                <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                <input id="password" type="password" name="password" required
+                    class="mt-1 block w-full rounded-xl border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
             </div>
 
-            <div class="mb-3">
-                <label for="password-confirm" class="form-label">Confirmar Contraseña</label>
-                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+            <div class="mb-6">
+                <label for="password-confirm" class="block text-sm font-medium text-gray-700">Confirmar Contraseña</label>
+                <input id="password-confirm" type="password" name="password_confirmation" required
+                    class="mt-1 block w-full rounded-xl border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
             </div>
 
-            <div class="d-grid">
-                <button type="submit" class="btn btn-primary">Registrarse</button>
-            </div>
+            <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl transition duration-200">
+                Registrarse
+            </button>
         </form>
 
-        <div class="text-center mt-3">
-            <small>¿Ya tienes una cuenta? <a href="{{ route('login') }}">Inicia sesión</a></small>
+        <div class="text-center mt-4">
+            <small class="text-gray-600">¿Ya tienes una cuenta?
+                <a href="{{ route('login') }}" class="text-blue-600 hover:text-blue-800 font-medium">Inicia sesión</a>
+            </small>
         </div>
     </div>
 </div>

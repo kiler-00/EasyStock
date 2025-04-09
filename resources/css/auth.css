@@ -1,13 +1,77 @@
+/* Fondo general para vistas de autenticación */
 body {
     background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
 
+/* Contenedor centrado */
+.login-container, .register-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Tarjeta */
 .card {
-    width: 400px;
-    padding: 20px;
     border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
 }
 
-.navbar .navbar-nav {
-    margin-left: auto;
+/* Encabezado */
+.card-header {
+    background: #007bff;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Cuerpo del formulario */
+.card-body {
+    padding: 30px;
+}
+
+/* Inputs */
+.form-control {
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Botón */
+.btn-primary {
+    background: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+/* Enlaces */
+.btn-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Mensajes de error */
+.invalid-feedback {
+    font-size: 14px;
+    color: red;
+    text-align: center;
+    display: block;
 }

@@ -13,6 +13,7 @@ return new class extends Migration {
             $table->text('user_agent')->nullable();
             $table->longText('payload');
             $table->integer('last_activity')->index();
+            $table->timestamps(); // <- Opcional, para mantener uniformidad
         });
     }
 
@@ -20,3 +21,4 @@ return new class extends Migration {
         Schema::dropIfExists('sessions');
     }
 };
+

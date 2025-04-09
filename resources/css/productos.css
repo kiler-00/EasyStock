@@ -1,163 +1,109 @@
-/* Productos */
-.bg-gray-100 {
-    background-color: #f7fafc;
-}
+/* Productos e Inventarios compartido */
+.bg-gray-100 { background-color: #f7fafc; }
+.bg-white { background-color: white; }
+.bg-blue-500 { background-color: #3b82f6; }
+.bg-yellow-500 { background-color: #f59e0b; }
+.bg-red-500 { background-color: #ef4444; }
+.text-white { color: white; }
+.text-gray-700 { color: #4a5568; }
+.text-gray-500 { color: #a0aec0; }
+.text-lg { font-size: 1.125rem; }
 
-.bg-blue-500 {
-    background-color: #3b82f6;
-}
+.max-w-3xl { max-width: 768px; }
+.mx-auto { margin-left: auto; margin-right: auto; }
 
-.bg-yellow-500 {
-    background-color: #f59e0b;
-}
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
-.bg-red-500 {
-    background-color: #ef4444;
-}
+.mb-4 { margin-bottom: 1rem; }
+.mt-4 { margin-top: 1rem; }
 
-.text-gray-700 {
-    color: #4a5568;
-}
+.inline-block { display: inline-block; }
+.flex { display: flex; }
+.justify-between { justify-content: space-between; }
+.items-center { align-items: center; }
 
-.text-gray-500 {
-    color: #a0aec0;
-}
+.rounded-md { border-radius: 0.375rem; }
+.rounded-lg { border-radius: 10px; }
 
-.text-lg {
-    font-size: 1.125rem;
-}
+.shadow-sm { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }
+.shadow-md { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
 
-.max-w-3xl {
-    max-width: 768px;
-}
+.hover\:bg-blue-600:hover { background-color: #2563eb; }
 
-.mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-}
+.transition { transition: all 0.3s ease; }
 
-.p-6 {
-    padding: 1.5rem;
-}
+.space-y-4 > * + * { margin-top: 1rem; }
 
-.bg-white {
-    background-color: white;
-}
-
-.shadow-md {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.rounded-lg {
-    border-radius: 10px;
-}
-
-.mb-4 {
+/* Inventarios específicos */
+.table {
+    width: 100%;
+    border-collapse: collapse;
     margin-bottom: 1rem;
+    background-color: #fff;
 }
 
-.inline-block {
+.table th,
+.table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table thead {
+    background-color: #f1f5f9;
+    font-weight: bold;
+}
+
+.btn {
     display: inline-block;
-}
-
-.px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-
-.rounded-md {
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: #3b82f6;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
     border-radius: 0.375rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.hover\:bg-blue-600:hover {
+.btn:hover {
     background-color: #2563eb;
 }
 
-.transition {
-    transition: all 0.3s ease;
-}
-
-.mt-4 {
-    margin-top: 1rem;
-}
-
-.space-y-4 > * + * {
-    margin-top: 1rem;
-}
-
-.flex {
-    display: flex;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-
-.items-center {
-    align-items: center;
-}
-
-.p-4 {
-    padding: 1rem;
-}
-
-.shadow-sm {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.rounded-md {
-    border-radius: 0.375rem;
-}
-
-.text-lg {
-    font-size: 1.125rem;
-}
-
-.text-gray-700 {
-    color: #4a5568;
-}
-
-.text-gray-500 {
-    color: #a0aec0;
-}
-
-.bg-yellow-500 {
-    background-color: #f59e0b;
-}
-
-.text-white {
-    color: white;
-}
-
-.px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-}
-
-.py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-}
-
-.bg-red-500 {
+.btn-danger {
     background-color: #ef4444;
 }
 
-.text-white {
-    color: white;
+.btn-danger:hover {
+    background-color: #dc2626;
 }
 
-.px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+.btn-success {
+    background-color: #10b981;
 }
 
-.py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+.btn-success:hover {
+    background-color: #059669;
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
 }

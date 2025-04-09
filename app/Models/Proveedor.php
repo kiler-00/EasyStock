@@ -9,6 +9,17 @@ class Proveedor extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nombre', 'contacto'];
-}
+    protected $table = 'proveedores';
 
+    protected $fillable = ['nombre', 'contacto'];
+
+    public function productos()
+    {
+        return $this->hasMany(Producto::class);
+    }
+
+    public function getContactoFormateadoAttribute()
+    {
+        return ucfirst($this->contacto);
+    }
+}

@@ -11,6 +11,9 @@ return new class extends Migration {
             $table->string('cliente');
             $table->decimal('total', 10, 2);
             $table->date('fecha');
+            $table->foreignId('producto_id')->constrained('productos')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // <-- agregado
+            $table->integer('cantidad');
             $table->timestamps();
         });
     }
