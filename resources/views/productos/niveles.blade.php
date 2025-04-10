@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+<div class="container d-flex justify-content-center mt-4">
+    <div class="p-4 rounded shadow-lg w-100" style="background-color: rgba(255, 255, 255, 0.9); max-width: 1000px;">
         <h1 class="mb-4">Niveles de Existencia</h1>
 
         @if($productos->isEmpty())
@@ -29,4 +30,5 @@
             </table>
         @endif
     </div>
+</div>
 @endsection

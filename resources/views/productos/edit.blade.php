@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg">
+<div class="container d-flex justify-content-center mt-4">
+    <div class="p-4 rounded shadow-lg w-100" style="background-color: rgba(255, 255, 255, 0.9); max-width: 1000px;">
         <h1 class="text-2xl font-semibold mb-4 text-gray-800">Editar Producto</h1>
 
         <form action="{{ route('productos.update', $producto->id) }}" method="POST">
@@ -25,4 +26,5 @@
             </div>
         </form>
     </div>
+</div>
 @endsection

@@ -4,7 +4,7 @@
 <div class="container bg-white p-4 rounded shadow-lg" style="max-width: 800px;">
     <h2 class="mb-4 text-center">Panel de Administración</h2>
 
-    <div class="row g-3">
+    <div class="row g-3 mb-5">
         <div class="col-md-6">
             <a href="{{ route('admin.seguimiento') }}"
                class="btn btn-outline-primary w-100"
@@ -36,6 +36,13 @@
                 🔔 Notificaciones
             </a>
         </div>
+        <div class="col-md-6">
+            <a href="{{ route('usuarios.index') }}"
+                class="btn btn-outline-info w-100"
+                title="Ver y gestionar empleados 👥">
+                👥 Ver Empleados
+            </a>
+        </div>
 
         <div class="col-md-12">
             <a href="{{ route('admin.otros') }}"
@@ -45,5 +52,6 @@
             </a>
         </div>
     </div>
+
 </div>
 @endsection
